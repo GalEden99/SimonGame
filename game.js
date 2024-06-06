@@ -83,3 +83,19 @@ function startOver(){
     started=false;
     disableClick();
 }
+
+let lastTouchEnd = 0;
+
+document.addEventListener('touchstart', function(event) {
+    const now = new Date().getTime();
+    if (now - lastTouchEnd <= 300) {
+        console.log("double-clicked");
+        event.preventDefault();
+    }
+}, false);
+
+document.addEventListener('touchend', function(event) {
+    lastTouchEnd = new Date().getTime();
+}, false);
+
+

@@ -1,30 +1,65 @@
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: #011F3F;
+
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
   color: #FEF2BF;
+  line-height: 1;
+  margin: 5%;
+  margin-bottom: 2%;
+  padding-top: 5%;
 }
 
 .container {
   display: block;
-  width: 50%;
-  margin: auto;
-
+  width: 80%;
+  margin: 5%;
 }
 
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
+  width: 20vh;
+  height: 20vh;
+
+  border: 10px solid #fef2bfb0;
   border-radius: 20%;
 }
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+  }
+
+  #level-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 10vh;
+    height: 10vh;
+    border: 5px solid #fef2bfb0;
+  }
+}
+
 
 .game-over {
   background-color: red;
